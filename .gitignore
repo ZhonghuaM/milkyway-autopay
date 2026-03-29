@@ -1,0 +1,22 @@
+# sensitive auth / local state
+mwidle_state*.json
+accounts.json
+playwright/.auth/
+chrome_profiles/
+mw_profiles/
+mwidle_playwright_profile/
+pw_stripe_profile/
+
+# outputs
+autopay_debug/
+*.csv
+*.png
+
+# python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.ipynb
+
+# macOS
+.DS_Store

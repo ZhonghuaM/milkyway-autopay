@@ -1,0 +1,12 @@
+[
+  {
+    "name": "acct_11111",
+    "game_url": "https://test.milkywayidle.com/game?characterId=11111",
+    "state_file": "mwidle_state_11111.json"
+  },
+  {
+    "name": "acct_12345",
+    "game_url": "https://test.milkywayidle.com/game?characterId=12345",
+    "state_file": "mwidle_state_12345.json"
+  }
+]
