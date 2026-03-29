@@ -1,21 +1,32 @@
 # milkyway-autopay
 
-Playwright automation for parallel test purchases in the Milky Way Idle test environment.
+Automation tooling for parallel test purchases in the Milky Way Idle test environment, built with Playwright.
 
-## Features
-- parallel multi-account execution
-- headless browser runs
-- saved browser state reuse
-- configurable loop count, quantity, and refresh cadence
+## Status
+This repository is intended for controlled testing workflows. It is not a general-purpose game botting framework.
 
-## Setup
-1. Install Python dependencies.
-2. Save authenticated browser state for each account.
-3. Create `accounts.json` from `accounts.example.json`.
-4. Run the script.
+## What this project does
+- reuses saved authenticated browser state
+- runs headless Playwright sessions
+- supports parallel execution across multiple accounts
+- opens checkout pages, updates quantity, submits payment, and recycles sessions over long runs
+- writes run results to CSV for later inspection
 
-## Examples
+## Repository contents
+- `milkyway_autopay.py` - main command-line script
+- `accounts.example.json` - example account configuration
+- `requirements.txt` - Python dependencies
+- `LICENSE-ADDITIONAL-TERMS.md` - additional use restrictions and acceptable-use notice
+
+## Requirements
+- Python 3.10+
+- Google Chrome or Chromium for the initial login/bootstrap step
+- Playwright Python package
+- Playwright browser binaries
+
+## Installation
+Create or activate a Python environment, then install dependencies:
+
 ```bash
-python milkyway_autopay.py save-state --cdp-url http://127.0.0.1:9222 --output mwidle_state_11111.json
-python milkyway_autopay.py save-state --cdp-url http://127.0.0.1:9223 --output mwidle_state_12345.json
-python milkyway_autopay.py run --accounts accounts.json --loops 100 --quantity 99 --delay-sec 0.1
+pip install -r requirements.txt
+playwright install chromium
