@@ -1,32 +1,14 @@
-# milkyway-autopay
+# Milky Way · Historical autopay repository
 
-Automation tooling for parallel test purchases in the Milky Way Idle test environment, built with Playwright.
+This project is now collected under **[ZhonghuaM/Milky-Way](https://github.com/ZhonghuaM/Milky-Way)**.
 
-## Status
-This repository is intended for controlled testing workflows. It is not a general-purpose game botting framework.
+| Looking for | New location |
+| --- | --- |
+| Standalone Cowbell / autopay snapshot and setup | [legacy/autopay](https://github.com/ZhonghuaM/Milky-Way/tree/legacy/autopay) |
+| Standalone labyrinth tool | [legacy/autolabyrinth](https://github.com/ZhonghuaM/Milky-Way/tree/legacy/autolabyrinth) |
+| Separate enhancer, market and Task userscripts | [legacy/userscripts](https://github.com/ZhonghuaM/Milky-Way/tree/legacy/userscripts) |
+| Workflow diagrams and anonymized experience studies | [Project overview](https://github.com/ZhonghuaM/Milky-Way) |
 
-## What this project does
-- reuses saved authenticated browser state
-- runs headless Playwright sessions
-- supports parallel execution across multiple accounts
-- opens checkout pages, updates quantity, submits payment, and recycles sessions over long runs
-- writes run results to CSV for later inspection
+This repository retains its original source and history. Use the consolidated branch for the reviewed historical package, including explicit test-environment checks and corrected setup instructions. The exploratory notebook here is not a supported Run All entry point.
 
-## Repository contents
-- `milkyway_autopay.py` - main command-line script
-- `accounts.example.json` - example account configuration
-- `requirements.txt` - Python dependencies
-- `LICENSE-ADDITIONAL-TERMS.md` - additional use restrictions and acceptable-use notice
-
-## Requirements
-- Python 3.10+
-- Google Chrome or Chromium for the initial login/bootstrap step
-- Playwright Python package
-- Playwright browser binaries
-
-## Installation
-Create or activate a Python environment, then install dependencies:
-
-```bash
-pip install -r requirements.txt
-playwright install chromium
+The current integrated implementation, private account state and runtime data are not published. Original terms remain in [LICENSE-ADDITIONAL-TERMS.md](LICENSE-ADDITIONAL-TERMS.md).
